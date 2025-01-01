@@ -6,7 +6,7 @@
   "author": "'Uallace <'uallace.macedo@outlook.com'>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon backend/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
     "bb": "cross-env NODE_ENV=production nodemon backend/server.js"
   },
   "dependencies": {
