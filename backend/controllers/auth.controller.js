@@ -41,7 +41,7 @@ export const login = async (req, res) => {
     const user = await User.findOne({ username });
     const correctPass = await bcrypt.compare(password, user?.password || '');
 
-    if(!user || !correctPass) return res.status(403).json({ error: 'Credenciais inválidas!' });
+    if(!user || !correctPass) return res.status(401).json({ error: 'Credenciais inválidas!' });
 
     generateToken(user._id, res);
     res.status(200).json({
