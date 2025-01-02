@@ -10,7 +10,7 @@ export const getUsersForSidebar = async (req, res) => {
     res.status(200).json(filteredUsers);
 
   } catch (error) {
-    console.error(`> ERRO (getUsersForSidebarController): Erro ao buscar usuários da barra lateral. [${error.message}]`);
+    console.error(`> ERRO: ao buscar usuários da barra lateral. [${error.message}]`);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 }
