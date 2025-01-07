@@ -5,7 +5,7 @@ import Signup from "./pages/signup";
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 const App = () => {
-  const {authUser} = useAuthContext()
+  const {authUser} = useAuthContext();
   return (
     <div className="p-4 h-screen flex items-center justify-center">
       <Routes>
